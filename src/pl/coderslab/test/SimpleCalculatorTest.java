@@ -1,4 +1,5 @@
 package pl.coderslab.test;
+
 import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -6,17 +7,17 @@ import org.junit.Test;
 
 import pl.coderslab.SimpleCalculator;
 
-class SimpleCalculatorTest {
+public class SimpleCalculatorTest {
 
 	@Test
-	void testAdd() {
+	public void testAdd() {
 		SimpleCalculator calc = new SimpleCalculator();
 		int result  = calc.addPositve(2, 3);
 		assertEquals(6, result);
 	}
 
 	@Test(expected = IllegalArgumentException.class)
-	void testAddPositve() {
+	public void testAddPositve() {
 		SimpleCalculator calc = new SimpleCalculator();
 		int result = calc.addPositve(1, 1);
 		assertEquals(2, result);
